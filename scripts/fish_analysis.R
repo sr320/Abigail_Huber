@@ -11,6 +11,6 @@ fish_data_cat <- fish_data %>%
 fish_data_cat <- fish_data %>%
   mutate(length_cat = ifelse(length > 300, "big", "small"))
 
-
-
+#scale length > 1 mm
+fish_data_cat_clean <- filter(fish_data_cat, scalelength > 1)
 
